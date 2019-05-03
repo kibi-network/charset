@@ -1,0 +1,424 @@
+;CHARSET<https://vocab.KIBI.network/Kixt/XML/>1.0
+
+...
+This is an (almost-)minimal case-insensitive subset of ASCII required to be able to write an XML document.
+
+The following characters are NOT included:
++ Controls
++ 24 [DOLLAR SIGN]
++ 40 [COMMERCIAL AT]
++ 5C [REVERSE SOLIDUS]
++ 5E [CIRCUMFLEX ACCENT]
++ 60 [GRAVE ACCENT]
++ 7B [LEFT CURLY BRACKET]
++ 7D [RIGHT CURLY BRACKET]
++ 7E [TILDE]
+
+The following characters are not strictly required for writing an XML document, but are included for convenience because they are frequently used in XML element and attribute names or values:
++ 27 [APOSTROPHE] (provided only double-quoting is used)
++ 2E [FULL STOP]
++ 48 [LATIN CAPITAL LETTER H]
++ 4A [LATIN CAPITAL LETTER J]
++ 57 [LATIN CAPITAL LETTER W]
++ 5A [LATIN CAPITAL LETTER Z]
++ 5F [LOW LINE]
++ 68 [LATIN SMALL LETTER H]
++ 6A [LATIN SMALL LETTER J]
++ 77 [LATIN SMALL LETTER W]
++ 7A [LATIN SMALL LETTER Z]
+
+XML 1.1 documents whose tag/attribute/entity names are limited to the characters in this document and which do not contain linebreaks will always be well-formed and parseable when interpreted as UTF-16 (provided they limit themselves to UTF-16 compatible codepoints), even as their contents might be gibberish to outsiders.
+(Note a Byte Order Mark must be prepended in this case.)
+
+For charsets which only use the characters 20..7E, the eight ASCII non-control characters not included can be assigned different values for an extended Latin character set.
+This is the same as the ECMA-6 invariant set except disallowing redefinition of 23, 5B, 5D, or 7C.
+For example, Kixt versions of the following charsets could conceivably be supported:
+
++ ISO-IR-002 <https://www.itscj.ipsj.or.jp/iso-ir/002.pdf>
++ ISO-IR-014 <https://www.itscj.ipsj.or.jp/iso-ir/014.pdf>
++ ISO-IR-057 <https://www.itscj.ipsj.or.jp/iso-ir/057.pdf>
++ ISO-IR-092 <https://www.itscj.ipsj.or.jp/iso-ir/092.pdf>
++ ISO-IR-102 <https://www.itscj.ipsj.or.jp/iso-ir/102.pdf>
+
+(Most existing ECMA-6 variants unfortunately redefine both 23 and 5B/5D, which are meaningful characters in the XML syntax.)
+///
+
+% ASCII CONTROLS AND BASIC LATIN
+' https://vocab.KIBI.network/Kixt/#COMMON
+
+/ Missing: 00..1F
+
+U+20 SPACE
+; 20 JUSTIFIABLE QUAD (FORMAT)
+= SPACE
+= QUAD
+= SP
+= JQ
+* This is a breaking, justifiable space
+
+U+21 EXCLAMATION MARK
+; 21 CLOSE BANG (SPACING)
+= CLOSE EXCLAMATION
+- close shriek
+- close scream
+- close pling
+- close ecphoneme
+- exclamation mark
+
+U+22 QUOTATION MARK
+; 22 DOUBLE APOSTROPHE (SPACING)
+= DOUBLE QUOTE
+- quotation mark
+* May be used as an unpaired double quote
+
+U+23 NUMBER SIGN
+; 23 OCTOTHORPE (SPACING)
+= NUMBER SIGN
+= NUMBER
+= HASH
+- pound
+- octatherp
+- octothorp
+- octathorp
+
+/ Missing: 24
+
+U+25 PERCENT SIGN
+; 25 PERCENT (SPACING)
+
+U+26 AMPERSAND
+; 26 AMPASSY (SPACING)
+= AMPERSAND
+* This is a punctuation character
+
+U+27 APOSTROPHE
+; 27 APOSTROPHE (SPACING)
+= SINGLE QUOTE
+* This is a punctuation character
+* May be used as an unpaired single quote
+
+U+28 LEFT PARENTHESIS
+; 28 OPEN PAREN (SPACING)
+= OPEN PARENTHESIS
+
+U+29 RIGHT PARENTHESIS
+; 29 CLOSE PAREN (SPACING)
+= CLOSE PARENTHESIS
+
+U+2A ASTERISK
+; 2A ASTERISK (SPACING)
+
+U+2B PLUS SIGN
+; 2B PLUS (SPACING)
+
+U+2C COMMA
+; 2C COMMA (SPACING)
+
+U+2D HYPHEN-MINUS
+; 2D HYPHEN-MINUS (SPACING)
+
+U+2E FULL STOP
+; 2E UNDERDOT
+= LOW DOT
+= PERIOD
+- point
+- baseline dot
+- full stop
+* This is a spacing character
+
+U+2F SOLIDUS
+; 2F SLASH (SPACING)
+= SOLIDUS
+
+U+30 DIGIT ZERO
+; 30 HINDU-ARABIC ZERO (SPACING)
+= HINDU-ARABIC NOUGHT
+= HINDU-ARABIC AUGHT
+- hindu-arabic naught
+- hindu-arabic ought
+
+U+31 DIGIT ONE
+; 31 HINDU-ARABIC ONE (SPACING)
+= DIGIT ONE
+
+U+32 DIGIT TWO
+; 32 HINDU-ARABIC TWO (SPACING)
+= DIGIT TWO
+
+U+33 DIGIT THREE
+; 33 HINDU-ARABIC THREE (SPACING)
+= DIGIT THREE
+
+U+34 DIGIT FOUR
+; 34 HINDU-ARABIC FOUR (SPACING)
+= DIGIT FOUR
+
+U+35 DIGIT FIVE
+; 35 HINDU-ARABIC FIVE (SPACING)
+= DIGIT FIVE
+
+U+36 DIGIT SIX
+; 36 HINDU-ARABIC SIX (SPACING)
+= DIGIT SIX
+
+U+37 DIGIT SEVEN
+; 37 HINDU-ARABIC SEVEN (SPACING)
+= DIGIT SEVEN
+
+U+38 DIGIT EIGHT
+; 38 HINDU-ARABIC EIGHT (SPACING)
+= DIGIT EIGHT
+
+U+39 DIGIT NINE
+; 39 HINDU-ARABIC NINE (SPACING)
+= DIGIT NINE
+
+U+3A COLON
+; 3A COLON (SPACING)
+
+U+3B SEMICOLON
+; 3B SEMICOLON (SPACING)
+
+U+3C LESS-THAN SIGN
+; 3C LESS-THAN (SPACING)
+
+U+3D EQUALS SIGN
+; 3D EQUALS (SPACING)
+
+U+3E GREATER-THAN SIGN
+; 3E GREATER-THAN (SPACING)
+
+U+3F QUESTION MARK
+; 3F CLOSE EROTEME (SPACING)
+= CLOSE QUESTION
+= CLOSE QUERY
+- close interrogation
+
+/ Missing: 40
+
+' <https://vocab.KIBI.network/Kixt/Scripts/#ROMAN>
+
+U+41 LATIN CAPITAL LETTER A
+; 41 ROMAN CAPITAL A (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 61
+
+U+42 LATIN CAPITAL LETTER B
+; 42 ROMAN CAPITAL BEE (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 62
+
+U+43 LATIN CAPITAL LETTER C
+; 43 ROMAN CAPITAL CEE (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 63
+
+U+44 LATIN CAPITAL LETTER D
+; 44 ROMAN CAPITAL DEE (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 64
+
+U+45 LATIN CAPITAL LETTER E
+; 45 ROMAN CAPITAL E (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 65
+
+U+46 LATIN CAPITAL LETTER F
+; 46 ROMAN CAPITAL EF (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 66
+
+U+47 LATIN CAPITAL LETTER G
+; 47 ROMAN CAPITAL GEE (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 67
+
+U+48 LATIN CAPITAL LETTER H
+; 48 ROMAN CAPITAL AITCH (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 68
+= ROMAN CAPITAL HAITCH
+
+U+49 LATIN CAPITAL LETTER I
+; 49 ROMAN CAPITAL I (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 69
+
+U+4A LATIN CAPITAL LETTER J
+; 4A ROMAN CAPITAL JAY (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 6A
+
+U+4B LATIN CAPITAL LETTER K
+; 4B ROMAN CAPITAL KAY (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 6B
+
+U+4C LATIN CAPITAL LETTER L
+; 4C ROMAN CAPITAL EL (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 6C
+
+U+4D LATIN CAPITAL LETTER M
+; 4D ROMAN CAPITAL EM (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 6D
+
+U+4E LATIN CAPITAL LETTER N
+; 4E ROMAN CAPITAL EN (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 6E
+
+U+4F LATIN CAPITAL LETTER O
+; 4F ROMAN CAPITAL O (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 6F
+
+U+50 LATIN CAPITAL LETTER P
+; 50 ROMAN CAPITAL PEE (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 70
+
+U+51 LATIN CAPITAL LETTER Q
+; 51 ROMAN CAPITAL CUE (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 71
+
+U+52 LATIN CAPITAL LETTER R
+; 52 ROMAN CAPITAL AR (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 72
+
+U+53 LATIN CAPITAL LETTER S
+; 53 ROMAN CAPITAL ES (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 73
+
+U+54 LATIN CAPITAL LETTER T
+; 54 ROMAN CAPITAL TEE (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 74
+
+U+55 LATIN CAPITAL LETTER U
+; 55 ROMAN CAPITAL U (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 75
+
+U+56 LATIN CAPITAL LETTER V
+; 56 ROMAN CAPITAL VEE (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 76
+
+U+57 LATIN CAPITAL LETTER W
+; 57 ROMAN CAPITAL DUB (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 77
+= ROMAN CAPITAL W
+- roman capital dubya
+- roman capital double u
+
+U+58 LATIN CAPITAL LETTER X
+; 58 ROMAN CAPITAL EX (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 78
+
+U+59 LATIN CAPITAL LETTER Y
+; 59 ROMAN CAPITAL WYE (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 79
+
+U+5A LATIN CAPITAL LETTER Z
+; 5A ROMAN CAPITAL ZED (SPACING)
+( <https://vocab.KIBI.network/Kixt/CompatibilityModes/#UPPERCASE> 7A
+= ROMAN CAPITAL ZEE
+
+' <https://vocab.KIBI.network/Kixt/#COMMON>
+
+U+5B LEFT SQUARE BRACKET
+; 5B OPEN BRACKET (SPACING)
+- open square bracket
+
+/ Missing: 5C
+
+U+5D RIGHT SQUARE BRACKET
+; 5D CLOSE BRACKET (SPACING)
+- close square bracket
+
+/ Missing: 5E
+
+U+5F LOW LINE
+; 5F UNDERSCORE (SPACING)
+= LOW LINE
+* This is a spacing character
+
+' <https://vocab.KIBI.network/Kixt/Scripts/#ROMAN>
+
+U+61 LATIN SMALL LETTER A
+; 61 ROMAN A (SPACING)
+
+U+62 LATIN SMALL LETTER B
+; 62 ROMAN BEE (SPACING)
+
+U+63 LATIN SMALL LETTER C
+; 63 ROMAN CEE (SPACING)
+
+U+64 LATIN SMALL LETTER D
+; 64 ROMAN DEE (SPACING)
+
+U+65 LATIN SMALL LETTER E
+; 65 ROMAN E (SPACING)
+
+U+66 LATIN SMALL LETTER F
+; 66 ROMAN EF (SPACING)
+
+U+67 LATIN SMALL LETTER G
+; 67 ROMAN GEE (SPACING)
+
+U+68 LATIN SMALL LETTER H
+; 68 ROMAN AITCH (SPACING)
+= ROMAN HAITCH
+
+U+69 LATIN SMALL LETTER I
+; 69 ROMAN I (SPACING)
+
+U+6A LATIN SMALL LETTER J
+; 6A ROMAN JAY (SPACING)
+
+U+6B LATIN SMALL LETTER K
+; 6B ROMAN KAY (SPACING)
+
+U+6C LATIN SMALL LETTER L
+; 6C ROMAN EL (SPACING)
+
+U+6D LATIN SMALL LETTER M
+; 6D ROMAN EM (SPACING)
+
+U+6E LATIN SMALL LETTER N
+; 6E ROMAN EN (SPACING)
+
+U+6F LATIN SMALL LETTER O
+; 6F ROMAN O (SPACING)
+
+U+70 LATIN SMALL LETTER P
+; 70 ROMAN PEE (SPACING)
+
+U+71 LATIN SMALL LETTER Q
+; 71 ROMAN CUE (SPACING)
+
+U+72 LATIN SMALL LETTER R
+; 72 ROMAN AR (SPACING)
+
+U+73 LATIN SMALL LETTER S
+; 73 ROMAN ES (SPACING)
+
+U+74 LATIN SMALL LETTER T
+; 74 ROMAN TEE (SPACING)
+
+U+75 LATIN SMALL LETTER U
+; 75 ROMAN U (SPACING)
+
+U+76 LATIN SMALL LETTER V
+; 76 ROMAN VEE (SPACING)
+
+U+77 LATIN SMALL LETTER W
+; 77 ROMAN DUB (SPACING)
+= ROMAN W
+- roman dubya
+- roman double u
+
+U+78 LATIN SMALL LETTER X
+; 78 ROMAN EX (SPACING)
+
+U+79 LATIN SMALL LETTER Y
+; 79 ROMAN WYE (SPACING)
+
+U+7A LATIN SMALL LETTER Z
+; 7A ROMAN ZED (SPACING)
+= ROMAN ZEE
+
+' <https://vocab.KIBI.network/Kixt/#COMMON>
+
+/ Missing: 7B
+
+U+7C VERTICAL LINE
+; 7C BAR (SPACING)
+= PIPE
+= RULE
+- vertical line
+
+/ Missing: 7D..7F

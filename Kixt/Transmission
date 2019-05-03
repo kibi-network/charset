@@ -1,0 +1,104 @@
+;CHARSET<https://charset.KIBI.network/Kixt/Transmission>1.0
+
+...
+This character set includes many of the format and data characters provided by ASCII.
+It is a lowest common denominator set for use in transmissions and document storage.
+///
+
+% ASCII CONTROLS AND BASIC LATIN
+' <https://vocab.KIBI.network/Kixt/#COMMON>
+
+U+00
+; 00 NULL (FORMAT)
+= NUL
+* This is a meaningless format character which can be used for byte-padding when encoding texts
+> 16 IDLE
+
+U+01
+; 01 HEAD (TRANSMISSION)
+= START OF HEADING
+= SOH
+
+U+02
+; 02 BEGIN (TRANSMISSION)
+= START OF TEXT
+= STX
+
+U+03
+; 03 FINISH (TRANSMISSION)
+= END OF TEXT
+= ETX
+
+U+04
+; 04 DONE (TRANSMISSION)
+= END OF TRANSMISSION
+= EOT
+
+/ Missing: 05..0D
+
+U+0E
+; 0E LEAVE (DATA)
+= SHIFT OUT
+= SO
+* Not suitable for text contents
+> 0F RETURN
+
+U+0F
+; 0F RETURN (DATA)
+= SHIFT IN
+= SI
+* Not suitable for text contents
+> 0E LEAVE
+
+/ Missing: 10..15
+
+U+16
+; 16 IDLE (TRANSMISSION)
+= SYNCHRONOUS IDLE
+= SYN
+* This is a meaningless transmission character for padding a stream
+* Use 00 for padding characters in storage
+> 00 NULL
+
+U+17
+; 17 BREAK (TRANSMISSION)
+= END OF TRANSMISSION BLOCK
+= ETB
+
+U+18
+; 18 CANCEL (TRANSMISSION)
+= CANCEL
+= CAN
+
+U+19
+; 19 PAUSE (TRANSMISSION)
+= END OF MEDIUM
+= EM
+
+U+1A
+; 1A INVALID (TRANSMISSION)
+= SUBSTITUTE
+= SUB
+* Indicates a corrupted or invalid character; for use in transmission only
+
+/ Missing: 1B
+
+U+1C
+; 1C VOLUME SEPARATOR (FORMAT)
+= FILE SEPARATOR
+= FS
+
+U+1D
+; 1D PART SEPARATOR (FORMAT)
+= GROUP SEPARATOR
+= GS
+
+U+1E
+; 1E CHAPTER SEPARATOR (FORMAT)
+= RECORD SEPARATOR
+= RS
+
+U+1F
+; 1F SECTION SEPARATOR (FORMAT)
+= UNIT SEPARATOR
+= US
