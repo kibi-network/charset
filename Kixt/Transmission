@@ -1,4 +1,6 @@
 ;CHARSET<https://charset.KIBI.network/Kixt/Transmission>1.0
+&VARIABLE
+- Kixt Transmission Charset
 
 ...
 This character set includes many of the format and data characters provided by ASCII.
@@ -71,7 +73,7 @@ U+18
 = CAN
 
 U+19
-; 19 PAUSE (TRANSMISSION)
+; 19 END (TRANSMISSION)
 = END OF MEDIUM
 = EM
 

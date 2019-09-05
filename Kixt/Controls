@@ -1,4 +1,6 @@
 ;CHARSET<https://charset.KIBI.network/Kixt/Controls>1.0
+&VARIABLE
+- Kixt Control Charset
 
 ...
 This is a superset of the <https://charset.KIBI.network/Kixt/Transmission> character set which adds control characters for interfacing with applications, 32 noncharacters (which map to their Unicode equivalents), as well as some additional format characters.
@@ -176,7 +178,7 @@ U+18
 = CAN
 
 U+19
-; 19 PAUSE (TRANSMISSION)
+; 19 END (TRANSMISSION)
 = END OF MEDIUM
 = EOM
 
@@ -495,11 +497,10 @@ U+AD SOFT HYPHEN
 * Indicates an automatic hyphenation opportunity, or that automatic hyphenation has occurred
 
 U+8E
-; 80D6 UCS CHARACTER (DATA)
+; 80D6 SHIFT (DATA)
 = SINGLE SHIFT TWO
 = SINGLE-SHIFT-2
 = SS2
-= UCS
 
 U+95
 ; 80D7 WAITING (CONTROL)

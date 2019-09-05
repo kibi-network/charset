@@ -1,4 +1,6 @@
 ;CHARSET<https://charset.KIBI.network/Kixt/ASCII>1.0
+&VARIABLE
+- Kixt ASCII
 
 ...
 This is the Kixt version of the ASCII character set.
@@ -161,7 +163,7 @@ U+18
 = CAN
 
 U+19
-; 19 PAUSE (TRANSMISSION)
+; 19 END (TRANSMISSION)
 = END OF MEDIUM
 = EOM
 

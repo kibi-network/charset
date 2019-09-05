@@ -1,4 +1,6 @@
 ;CHARSET<https://charset.KIBI.network/Kixt/Null>1.0
+&VARIABLE
+- Null Charset
 
 % ASCII CONTROLS AND BASIC LATIN
 ' <https://vocab.KIBI.network/Kixt/#COMMON>

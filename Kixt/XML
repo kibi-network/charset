@@ -1,4 +1,6 @@
 ;CHARSET<https://vocab.KIBI.network/Kixt/XML/>1.0
+&VARIABLE
+- Kixt XML Charset
 
 ...
 This is an (almost-)minimal case-insensitive subset of ASCII required to be able to write an XML document.
@@ -30,7 +32,7 @@ The following characters are not strictly required for writing an XML document, 
 XML 1.1 documents whose tag/attribute/entity names are limited to the characters in this document and which do not contain linebreaks will always be well-formed and parseable when interpreted as UTF-16 (provided they limit themselves to UTF-16 compatible codepoints), even as their contents might be gibberish to outsiders.
 (Note a Byte Order Mark must be prepended in this case.)
 
-For charsets which only use the characters 20..7E, the eight ASCII non-control characters not included can be assigned different values for an extended Latin character set.
+Especially for charsets which only use the characters 20..7E, the eight ASCII non-control characters not included can be assigned different values for an extended Latin character set.
 This is the same as the ECMA-6 invariant set except disallowing redefinition of 23, 5B, 5D, or 7C.
 For example, Kixt versions of the following charsets could conceivably be supported:
 
