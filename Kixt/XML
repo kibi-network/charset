@@ -46,7 +46,7 @@ For example, Kixt versions of the following charsets could conceivably be suppor
 ///
 
 % ASCII CONTROLS AND BASIC LATIN
-' https://vocab.KIBI.network/Kixt/#COMMON
+' <https://vocab.KIBI.network/Kixt/#COMMON>
 
 / Missing: 00..1F
 
@@ -120,7 +120,7 @@ U+2D HYPHEN-MINUS
 ; 2D HYPHEN-MINUS (SPACING)
 
 U+2E FULL STOP
-; 2E UNDERDOT
+; 2E UNDERDOT (SPACING)
 = LOW DOT
 = PERIOD
 - point
