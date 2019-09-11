@@ -1,105 +1,164 @@
 ;CHARSET<https://charset.KIBI.network/Kixt/Transmission>1.0
 &VARIABLE
 - Kixt Transmission Charset
-
-...
-This character set includes many of the format and data characters provided by ASCII.
-It is a lowest common denominator set for use in transmissions and document storage.
-///
+* This character set includes many of the format and data characters provided by ASCII. It is a lowest common denominator set for use in transmissions and document storage.
 
 % ASCII CONTROLS AND BASIC LATIN
 ' <https://vocab.KIBI.network/Kixt/#COMMON>
+- Common characters
+* These characters do not belong to any particular script
 
 U+00
 ; 00 NULL (FORMAT)
 = NUL
 * This is a meaningless format character which can be used for byte-padding when encoding texts
 > 16 IDLE
+> 7F NOTHING
+) C28A2851450C20820E
+) C0A0A0A00028282838000808080E0000
 
 U+01
-; 01 HEAD (TRANSMISSION)
+; 01 HEAD (CONTROL)
 = START OF HEADING
 = SOH
+* This is a transmission character
+) 63063021450828A38A
+) 60C060C00010282810000A0A0E0A0000
 
 U+02
-; 02 BEGIN (TRANSMISSION)
+; 02 BEGIN (CONTROL)
 = START OF TEXT
 = STX
+* This is a transmission character
+) 63063070820828410A
+) 60C060C00038101010000A04040A0000
 
 U+03
-; 03 FINISH (TRANSMISSION)
+; 03 FINISH (CONTROL)
 = END OF TEXT
 = ETX
+* This is a transmission character
+) E3083870820828410A
+) E0C080E00038101010000A04040A0000
 
 U+04
-; 04 DONE (TRANSMISSION)
+; 04 DONE (CONTROL)
 = END OF TRANSMISSION
 = EOT
+* This is a transmission character
+) E30838214508384104
+) E0C080E00010282810000E0404040000
 
 / Missing: 05..0D
 
 U+0E
 ; 0E LEAVE (DATA)
 = SHIFT OUT
+= LOCKING-SHIFT ONE
 = SO
 * Not suitable for text contents
 > 0F RETURN
+) 63063000820010A284
+) 60C060C0000010100000040A0A040000
 
 U+0F
 ; 0F RETURN (DATA)
 = SHIFT IN
+= LOCKING-SHIFT ZERO
 = SI
 * Not suitable for text contents
 > 0E LEAVE
+) 63063000820038410E
+) 60C060C00000101000000E04040E0000
 
 / Missing: 10..15
 
 U+16
-; 16 IDLE (TRANSMISSION)
+; 16 IDLE (CONTROL)
 = SYNCHRONOUS IDLE
 = SYN
 * This is a meaningless transmission character for padding a stream
 * Use 00 for padding characters in storage
 > 00 NULL
+> 7F NOTHING
+) 63063051C11C30A28A
+) 60C060C00028380838000C0A0A0A0000
 
 U+17
-; 17 BREAK (TRANSMISSION)
+; 17 BREAK (CONTROL)
 = END OF TRANSMISSION BLOCK
 = ETB
+* This is a transmission character
+) E3083870820830E28E
+) E0C080E00038101010000C0C0A0E0000
 
 U+18
-; 18 CANCEL (TRANSMISSION)
+; 18 CANCEL (CONTROL)
 = CAN
+* This is a transmission character
+) 62081821471430A28A
+) 608080600010283828000C0A0A0A0000
 
 U+19
-; 19 END (TRANSMISSION)
+; 19 END (CONTROL)
 = END OF MEDIUM
-= EM
+= EOM
+* This is a transmission character
+) E3083821450838E38A
+) E0C080E00010282810000E0E0E0A0000
 
 U+1A
-; 1A INVALID (TRANSMISSION)
+; 1A INVALID (CONTROL)
 = SUBSTITUTE
 = SUB
+* This is a transmission character
 * Indicates a corrupted or invalid character; for use in transmission only
+) 63063051450C30E28E
+) 60C060C00028282818000C0E0A0E0000
 
 / Missing: 1B
 
 U+1C
 ; 1C VOLUME SEPARATOR (FORMAT)
+= INFORMATION SEPARATOR FOUR
 = FILE SEPARATOR
 = FS
+) E20C2000820018C18C
+) E080C080000010100000060C060C0000
 
 U+1D
 ; 1D PART SEPARATOR (FORMAT)
+= INFORMATION SEPARATOR THREE
 = GROUP SEPARATOR
 = GS
+) 620A1800820018C18C
+) 6080A060000010100000060C060C0000
 
 U+1E
 ; 1E CHAPTER SEPARATOR (FORMAT)
+= INFORMATION SEPARATOR TWO
 = RECORD SEPARATOR
 = RS
+) E28C2800820018C18C
+) E0A0C0A0000010100000060C060C0000
 
 U+1F
 ; 1F SECTION SEPARATOR (FORMAT)
+= INFORMATION SEPARATOR ONE
 = UNIT SEPARATOR
 = US
+) A28A1800820018C18C
+) A0A0A060000010100000060C060C0000
+
+/ Missing: 20..7E
+
+U+7F
+; 7F NOTHING (CONTROL)
+= DELETE
+= DEL
+* This is a meaningless control character
+* Used to signify a message is empty
+> 00 NULL
+> 16 IDLE
+) C28A3071841C20820E
+) C0A0A0C00038302038000808080E0000
